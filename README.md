@@ -1,2 +1,3 @@
 # bors-kindergarten
 test
+foo
