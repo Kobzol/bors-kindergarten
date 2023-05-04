@@ -15,4 +15,4 @@ jobs:
 
       - name: Run command
         run:
-          exit 0
+          exit 1
