@@ -1,4 +1,4 @@
-name: Workflow 1
+name: Workflow 2
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    name: Workflow 1 job 1
+    name: Workflow 2 job 1
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
@@ -15,4 +15,4 @@ jobs:
 
       - name: Run command
         run:
-          exit 1
+          exit 0
