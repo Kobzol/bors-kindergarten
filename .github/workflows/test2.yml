@@ -15,5 +15,5 @@ jobs:
 
       - name: Run command
         run: |
-          sleep 5
+          sleep 50
           exit 0
