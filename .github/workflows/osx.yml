@@ -1,0 +1,14 @@
+name: OS X
+
+on:
+  push:
+    branches:
+      - osx-test
+
+jobs:
+  test:
+    name: OS X test
+    runs-on: macos-latest
+    steps:
+      - name: Disable SIP
+        run: spctl developer-mode enable-terminal
