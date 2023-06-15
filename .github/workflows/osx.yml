@@ -10,5 +10,5 @@ jobs:
     name: OS X test
     runs-on: macos-latest
     steps:
-      - name: Disable SIP
-        run: spctl developer-mode enable-terminal
+      - name: Query SIP
+        run: csrutil status
