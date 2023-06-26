@@ -6,6 +6,10 @@ on:
       - automation/bors/try
   pull_request:
 
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}"
+  cancel-in-progress: true
+
 jobs:
   test:
     name: Print envs
@@ -16,3 +20,7 @@ jobs:
           echo ${{ github.sha }}
           echo ${{ github.event.pull_request.number }}
           echo ${{ github.event.pull_request.number || github.sha }}
+      - name: Run command
+        run: |
+          sleep 100
+          exit 0
