@@ -1,0 +1,16 @@
+name: Workflow 2
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    name: Workflow 2 job 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        run: |
+          echo ${{ github.workflow }}
+          echo ${{ github.sha }}
+          echo ${{ github.event.pull_request.number }}
+          echo ${{ github.event.pull_request.number || github.sha }}
