@@ -1,15 +1,17 @@
-name: Workflow 2
+name: PR workflow
 
 on:
+  push:
+    branches:
+      - automation/bors/try
   pull_request:
 
 jobs:
   test:
-    name: Workflow 2 job 1
+    name: Print envs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout sources
-        run: |
+      - run: |
           echo ${{ github.workflow }}
           echo ${{ github.sha }}
           echo ${{ github.event.pull_request.number }}
