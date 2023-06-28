@@ -21,7 +21,7 @@ jobs:
           echo "PR: ${{ github.event.pull_request.number }}"
           echo "PR or SHA: ${{ github.event.pull_request.number || github.sha }}"
           echo "Ref: ${{ github.ref }}"
-          echo "${{ github.event.pull_request.number || github.sha }}"
+          echo "Result: ${{ (github.ref == 'refs/heads/automation/bors/try' && github.sha) || github.ref }}"
       - name: Run command
         run: |
           sleep 100
