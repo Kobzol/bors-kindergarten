@@ -16,10 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo ${{ github.workflow }}
-          echo ${{ github.sha }}
-          echo ${{ github.event.pull_request.number }}
-          echo ${{ github.event.pull_request.number || github.sha }}
+          echo "Workflow: ${{ github.workflow }}"
+          echo "SHA: ${{ github.sha }}"
+          echo "PR: ${{ github.event.pull_request.number }}"
+          echo "PR or SHA: ${{ github.event.pull_request.number || github.sha }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "${{ github.event.pull_request.number || github.sha }}"
       - name: Run command
         run: |
           sleep 100
