@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - automation/bors/try
+      - automation/bors/try2
   pull_request:
 
 concurrency:
