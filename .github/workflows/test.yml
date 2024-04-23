@@ -1,9 +1,7 @@
 name: Test
 
 on:
-  push:
-    branches:
-      - automation/bors/try
+  pull_request:
 
 jobs:
   test:
@@ -16,3 +14,7 @@ jobs:
       - name: Run command
         run:
           exit 0
+
+      - uses: ./.github/workflows/composite1
+        env:
+          FOO: BAR
