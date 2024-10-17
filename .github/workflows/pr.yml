@@ -1,0 +1,29 @@
+name: PR workflow
+
+on:
+  push:
+    branches:
+      - automation/bors/try
+      - automation/bors/try2
+  pull_request:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}"
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Print envs
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Workflow: ${{ github.workflow }}"
+          echo "SHA: ${{ github.sha }}"
+          echo "PR: ${{ github.event.pull_request.number }}"
+          echo "PR or SHA: ${{ github.event.pull_request.number || github.sha }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Result: ${{ (github.ref == 'refs/heads/automation/bors/try' && github.sha) || github.ref }}"
+      - name: Run command
+        run: |
+          sleep 100
+          exit 0
