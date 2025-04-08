@@ -6,3 +6,5 @@ warn_non_default_branch.enable = true
 [pr-tracking]
 
 [canonicalize-issue-links]
+
+[no-mentions]
