@@ -8,3 +8,5 @@ warn_non_default_branch.enable = true
 [canonicalize-issue-links]
 
 [no-mentions]
+
+[relabel]
