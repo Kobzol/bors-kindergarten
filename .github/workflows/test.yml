@@ -20,3 +20,7 @@ jobs:
       - name: Conclusion
         run:
           exit 0
+
+      - uses: ./.github/workflows/composite1
+        env:
+          FOO: BAR
