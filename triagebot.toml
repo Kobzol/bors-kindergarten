@@ -13,3 +13,7 @@ warn_non_default_branch.enable = true
 [no-mentions]
 
 [relabel]
+
+[concern]
+
+[note]
