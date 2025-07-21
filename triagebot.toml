@@ -1,0 +1,19 @@
+[assign]
+warn_non_default_branch.enable = true
+
+[assign.owners]
+"*" = ["@kobzol"]
+
+[shortcut]
+
+[pr-tracking]
+
+[canonicalize-issue-links]
+
+[no-mentions]
+
+[relabel]
+
+[concern]
+
+[note]
