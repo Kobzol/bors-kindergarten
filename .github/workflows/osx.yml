@@ -1,0 +1,14 @@
+name: OS X
+
+on:
+  push:
+    branches:
+      - osx-test
+
+jobs:
+  test:
+    name: OS X test
+    runs-on: macos-latest
+    steps:
+      - name: Query SIP
+        run: csrutil status
