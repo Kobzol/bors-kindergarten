@@ -1,0 +1,10 @@
+[assign]
+warn_non_default_branch.enable = true
+
+[shortcut]
+
+[pr-tracking]
+
+[canonicalize-issue-links]
+
+[no-mentions]
