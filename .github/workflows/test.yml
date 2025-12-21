@@ -12,11 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: exit 0
-  sleep-30:
+  sleep-1800:
     needs: [ init ]
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'pull_request' }}
     steps:
-      - run: sleep 30
+      - run: sleep 1800
   dynamic:
     needs: [ init ]
     runs-on: ubuntu-latest
